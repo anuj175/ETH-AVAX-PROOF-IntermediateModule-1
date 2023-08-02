@@ -3,13 +3,11 @@ pragma solidity ^0.8;
 
 contract MyToken {
     function test(uint256 value) external pure returns (bool) {
-        // Use of assert statement to check if value is greater than 50
-        assert(value > 50);
+       
+        assert(value > 50);        
         
-        // Use of require statement to check if value is not equal to 30
         require(value != 55, "Condition not satisfied: value must not be equal to 55");
-
-        // Use of revert statement with a custom error message
+       
         if (value == 80) {
             revert("Condition not satisfied: value must not be equal to 80");
         }
